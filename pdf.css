@@ -1,0 +1,127 @@
+body, header{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.grid-title {
+    display: grid;
+    grid-template-columns: 150px 350px 1fr;
+}
+
+.listItem-grid {
+    display: grid;
+    grid-template-columns: 5% 40% 10% 10% 15% 10%;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 10px;
+    align-items: start;
+    font-size: 13px;
+    position: relative;
+    min-height: 6in;
+    grid-auto-rows: min-content;
+    border-bottom: 1px solid;
+}
+
+.listItem-grid > div {
+    overflow-wrap: break-word; /* Break long words */
+    word-break: break-word;   /* Fallback for older browsers */
+    overflow: hidden;         /* Prevent overflow */
+    text-overflow: ellipsis;  /* Add ellipsis if content overflows */
+    /*white-space: nowrap;  Ensure single-line content (abcd....) - if too long*/
+}
+
+/* Center content in data rows */
+.listItem-grid > div:nth-child(6n+1), /* NO */
+.listItem-grid > div:nth-child(6n+3), /* QTY */
+.listItem-grid > div:nth-child(6n+4), /* UNIT PRICE */
+.listItem-grid > div:nth-child(6n+5) {
+    text-align: center;
+    justify-self: center;
+}
+
+/* Center content in title headers */
+.div-desc > div:nth-child(1), /* NO */
+.div-desc > div:nth-child(3), /* QTY */
+.div-desc > div:nth-child(4), /* UOM */ 
+.div-desc > div:nth-child(5)/* UNIT PRICE */ { 
+    text-align: center;
+    justify-self: center;
+}
+
+.listItem-grid > div:nth-child(6n+6) /* AMOUNT */{
+    display: flex;
+    justify-content: end;
+}
+
+
+.div-desc > div:nth-child(6) /* AMOUNT */ { 
+    display: flex;
+    justify-content: end;
+}
+
+.div-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 11px;
+    position: relative;
+}
+
+.div-title {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+}
+
+#sales-invoice {
+    color: rgb(55, 55, 188);
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.date {
+    text-align: end;
+}
+
+.div-desc {
+    display: grid;
+    grid-template-columns: 5% 40% 10% 10% 15% 10%;
+    column-gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.div-calculation {
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.title-calculation {
+    width: 15%;
+}
+
+.semicolon {
+    width: 5%;
+}
+
+.footer {
+    width: 99%;
+    text-align: center;
+    position: relative;
+    margin-top: auto;
+    font-size: 10px;
+}

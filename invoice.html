@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invoice</title>
+        <header>Perniagaan Lan Man</header><br>
+        <link rel="stylesheet" href="invoice.css">
+    </head>
+    
+    <body>
+        <div class="listItem-grid">
+            <input placeholder="物品名称" class="js-inputName inputArea">
+            <input placeholder="数量" type="number" class="js-inputQuan inputArea">
+            <select class="js-UOM">
+                <option>UNIT</option>
+                <option>CTN</option>
+            </select>
+            <input placeholder="单品价钱" type="number" class="js-pricePerItem inputArea">
+            <input type="date" id="js-inputDate">
+            
+            <button onclick="
+                addItem();
+            " class="add-button">加入列表</button>
+        </div>
+
+        <button onclick="
+            clearAll();
+        " class="clear-button">清除全部</button>
+
+        <div class="js-itemList listItemHTML-grid"></div>
+
+        <hr class="horizontal-line">
+
+        <p>是否有折扣？</p>
+        <input type="checkbox" id="discount-checkbox">
+        <label for="discount-checkbox">是</label>
+        <div id="input-discount">
+            <label for="discount-value">输入折扣（%）: </label>
+            <input type="number" id="discount-value" placeholder="折扣价">
+        </div>
+
+        <div class="js-total totalPreview"></div>
+
+        <button class="js-preview preview-button" onclick="
+            previewButton();
+        ">提交</button>
+
+    </body>
+
+    <script src="invoice.js"></script>
+</html>

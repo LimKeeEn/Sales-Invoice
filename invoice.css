@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="date"] {
+    color: grey;
+}
+
+input[type="date"].date-set {
+    color: black;
+}
+
+.listItem-grid {
+    display: grid;
+    grid-template-columns: 40% 10% 10% 10% 10% 10%;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.listItemHTML-grid {
+    display: grid;
+    grid-template-columns: 5% 35% 10% 10% 10% 10% 10%;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 20px;
+}
+
+.listItemHTML-grid > div {
+    overflow-wrap: break-word; /* Break long words */
+    word-break: break-word;   /* Fallback for older browsers */
+    overflow: hidden;         /* Prevent overflow */
+    text-overflow: ellipsis;  /* Add ellipsis if content overflows */
+    /*white-space: nowrap;  Ensure single-line content (abcd....) - if too long*/
+}
+
+.inputArea {
+    padding: 10px;
+}
+
+.add-button {
+    background-color: bisque;
+    border-width: 1px;
+    font-weight: bold;
+}
+
+.clear-button {
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(244, 149, 149);
+    font-weight: bold;
+    border: 1px solid;
+}
+
+.deleteButton {
+    border: none;
+    background: none;
+}
+
+.horizontal-line {
+    margin-top: 50px;
+    border: 1px solid grey;
+}
+
+#input-discount {
+    display: none;
+}
+
+.totalPreview {
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+
+.preview-button {
+    padding: 10px;
+    width: 100px;
+    font-weight: bold;
+    margin-top: 30px;
+}

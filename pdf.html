@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PDF</title>
+        <link rel="stylesheet" href="pdf.css">
+    </head>
+
+    <body>
+        <div id="pdf-content">
+            <div class="grid-title">
+                <img class="logo" src="LanMan-logo.jpg">
+                <div class="div-info">
+                    <p>PERNIAGAAN LAN MAN 人民</p>
+                    <p>No.17, JALAN TEPI PASAR, 84200 BAKRI,MUAR, JOHOR.</p>
+                    <P>Tel / Fax: 069866927, 012-3415628</P>
+                </div>
+
+                <div class="div-title">
+                    <p id="sales-invoice">SALES INVOICE</p>
+                    <p class="js-dateInput"></p>
+                </div>
+            </div>           
+            
+            <div class="div-desc" >
+                <div>No.</div>
+                <div>DESCRIPTION</div>
+                <div>QTY</div>
+                <div>UOM</div>
+                <div>UNIT PRICE</div>
+                <div>AMOUNT</div>
+            </div>
+
+            <div class="js-pdfItemList listItem-grid"></div>
+            
+            <div class="div-calculation">
+                <div class="title-calculation">
+                    <p>SUB-TOTAL</p>
+                    <p>DISCOUNT</p>
+                    <p>TOTAL</p>
+                </div>
+
+                <div class="semicolon">
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                </div>
+                
+                <div>
+                    <p class="js-subtotal div-totalPrice"></p>
+                <p class="js-discount div-totalPrice"></p>
+                <p class="js-totalPrice div-totalPrice"></p>
+                </div>
+            </div>
+
+            <p class="footer">GOODS SOLD ARE NOT RETURNABLE. THANK YOU.</p>
+            
+        </div>
+
+        <button id="download-pdf">Download</button>
+
+      </body>
+
+      <!--warning: There have been several issues reported in v0.10. They are being investigated but in the meantime you may wish to remain on v0.9.3-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+      <script src="pdf.js"></script>
+
+</html>
